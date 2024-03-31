@@ -1,0 +1,38 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.bg-set-img {
+    font-family: 'Ubuntu', sans-serif;
+    background-image: url("../Images/index-bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: black;
+    text-align: justify;
+}
+
+.mobile-padding-setter {
+    padding: 0 90px;
+}
+
+@media only screen and (max-device-width: 600px) {
+    .mobile-padding-setter {
+        padding: 0 8px;
+    }
+}
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}

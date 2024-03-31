@@ -1,0 +1,41 @@
+.flex-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert-style {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+.width-low {
+    width: 60%;
+}
+
+@media only screen and (max-device-width: 600px) {
+    .width-low {
+        width: 98%;
+    }
+}
+
+.form-text {
+    position: relative;
+}
+
+input {
+    padding: 5px 5px 5px 150px;
+}
+
+.static-value {
+    position: absolute;
+    left: 3em;
+    font-weight: bold;
+    font-size: 0.8em;
+    color: #444;
+    top: 9px;
+}

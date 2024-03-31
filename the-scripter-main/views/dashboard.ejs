@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This website helps you to run your scripts and programs online.">
+    <!-- <meta name="Arshad" content="https://arshad272.github.io/"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="ROBOTS" content="Index, FOLLOW">
+    <title>Scripter - Dashboard</title>
+    <link rel="shortcut icon" href="Images/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/loginstyle.css">
+    <script src="https://kit.fontawesome.com/1a6184a610.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/dashboard_style.css">
+
+</head>
+
+<body>
+    <div class="text-center flex-display bg-gray-100 text-gray-800 py-7 px-6">
+        <h1 class="text-5xl font-bold w-11/12 mt-0 mb-6">Hello
+            <%= name %>! Welcome Back to Scripter</h1>
+        <div class="top-0 right-0 w-1/12">
+            <a class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                href="/logout">Logout</a>
+        </div>
+    </div>
+    <div class="alert-style mt-6">
+        <div id="alert-border-1" class="flex p-4 rounded-md text-center text-lg mb-4 bg-blue-100 border-t-4  border-blue-500 dark:bg-blue-200 width-low" role="alert">
+            <svg class="flex-shrink-0 w-7 h-7 text-blue-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+            <div class="ml-3 font-medium text-blue-700">
+                <%= uploadMsg %>
+            </div>
+            <button type="button" onclick="displayNone()" class="ml-auto -mx-1.5 -my-1.5 text-blue-900 rounded-lg focus:ring-2 focus:ring-blue-400 p-1.5 hover:bg-blue-200 dark:hover:bg-blue-300 inline-flex h-8 w-8" data-dismiss-target="#alert-border-1" aria-label="Close">
+            <span class="sr-only">Dismiss</span>
+            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+        </div>
+    </div>
+    <!-- <div class="bg-indigo-100 text-center py-4 lg:px-4">
+        <div class="p-2 bg-indigo-600 items-center text-white leading-none lg:rounded-full flex lg:inline-flex" role="alert">
+            <span class="flex rounded-full bg-indigo-900 uppercase px-2 py-1 text-lg font-bold mr-3">Hey !</span>
+            <span class="font-semibold mr-2 text-lg text-left flex-auto"><%= uploadMsg %></span>
+        </div>
+    </div> -->
+
+    <section class="text-gray-800 body-font mobile-padding-setter">
+        <div class="container px-5 py-10 mx-auto flex flex-wrap items-center">
+            <div class="lg:w-3/5 md:w-1/2 md:pr-8 lg:pr-0 pr-0">
+                <h1 class="title-font font-medium text-3xl text-gray-900">Upload Your Scripts / Programs</h1>
+                <p class="leading-relaxed text-justify mt-4">We support execution of various programming languages. Try executing Python / Java / C programs in cloud now ! Try not to use modules like os and pyautogui while uploading your python scripts. For more details click on below link. </p>
+                <a href="terms-of-use.html" target="__blank" class="mt-5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                    data-mdb-ripple="true" data-mdb-ripple-color="light" href="#!" role="button">Terms of Usage</a>
+            </div>
+            <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
+                <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Upload Your File</h2>
+                <div class="relative mb-4">
+                    <form action="fileUpload" method="post" enctype="multipart/form-data">
+                        <input required type="file" id="file" name="uploadthis" type="submit" value="Upload" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-3 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        <input style="display: none;" type="text" value='<%= mailid %>' name="usermail" />
+                        <button class="text-white bg-indigo-500 border-0 mt-4 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mb-3">Upload</button> <br>
+                        <a href="/installModules" target="__blank" class="text-sm text-gray-500 hover:text-blue-800"> <b> Click Here </b> for installation of new modules in Python </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-gray-800 body-font mobile-padding-setter">
+        <div class="container px-5 py-10 mx-auto">
+            <div class="flex flex-wrap w-full mb-10">
+                <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Your Files</h1>
+                    <div class="h-1 w-32 bg-indigo-500 rounded"></div>
+                </div>
+            </div>
+            <div class="flex flex-wrap -m-4">
+                <% for ( let i=0 ; i < count-1 ; i = i+2 ){ %>
+                    <div class="xl:w-1/4 md:w-1/2 p-4">
+                        <div class="bg-gray-100 p-6 rounded-lg">
+                            <img class="h-40 rounded w-full object-cover object-center mb-6 programImg" src="https://source.unsplash.com/random/720x400?sig=<%= i+1 %>" alt="content">
+                            <h3 class="tracking-widest text-indigo-500 text-m font-medium title-font status-msg">Status :
+                                <%= files[i+1] %>
+                            </h3>
+                            <h2 class="text-xl text-gray-900 font-medium title-font mb-4 file-name">File Name :
+                                <%= files[i] %>
+                            </h2>
+                            <div style="margin-top: 10px;" class="flex-display">
+                                <form class="run-form" action="runFile" method="post">
+                                    <input style="display:none ;" checked type="checkbox" value='<%= mailid %>' name="mailid" />
+                                    <input style="display:none ;" checked type="checkbox" value='<%= files[i] %>' name="filename" />
+                                    <input style="font-family: 'Roboto', 'sans-serif'; cursor: pointer;font-weight: bold;" type="submit" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 "
+                                        value="Run">
+                                </form>
+                                <form class="stop-form" action="terminateExecution" method="post">
+                                    <input style="display:none ;" checked type="checkbox" value='<%= mailid %>' name="mailid" />
+                                    <input style="display:none ;" checked type="checkbox" value='<%= files[i] %>' name="filename" />
+                                    <input style="font-family: 'Roboto', 'sans-serif'; cursor: pointer; font-weight: bold;" type="submit" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                                        value="Stop">
+                                </form>
+                                <form class="del-form" action="deleteFile" method="post">
+                                    <input style="display:none ;" name="fileName" checked type="checkbox" value='<%=files[i]%>' />
+                                    <input style="display:none ;" name="mailid" checked type="checkbox" value='<%=mailid%>' />
+                                    <button class="ml-8 text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                                        style="cursor: pointer;"><img style="width:1.5em ; height:1.5em;" src="Images/delete.png" alt="del"></button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+    <footer class="text-gray-600 bg-blue-100 body-font">
+        <div class="container px-5 py-5 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                <span class="ml-3 text-xl">Scripter</span>
+            </a>
+            <p class="text-m font-medium text-gray-900 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">Best | Secure | Safe — Developed By
+                <a target="__blank" href="https://arshad272.github.io" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@Arshad</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a target="__blank" href="https://www.facebook.com/profile.php?id=100013447329814" class="text-gray-700">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a target="__blank" href="https://www.instagram.com/arshad.k.272/" class="ml-3 text-gray-700">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <a target="__blank" href="https://www.linkedin.com/in/arshad272/" class="ml-3 text-gray-700">
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
+        </div>
+    </footer>
+    <p id="classFinder" style="display: none;">
+        <%= classname %>
+    </p>
+    <script>
+        let status = document.getElementsByClassName("status-msg")
+        let stops = document.getElementsByClassName("stop-form")
+        let runs = document.getElementsByClassName("run-form")
+        for (let i = 0; i < status.length; i++) {
+            if (status[i].innerHTML.includes('Not')) {
+                stops[i].style.display = "None";
+            } else {
+                runs[i].style.display = "None";
+            }
+        }
+
+        window.onload = (event) => {
+            document.getElementById("alert-border-1").className = document.getElementById("classFinder").innerHTML;
+        };
+
+
+        function displayNone() {
+            document.getElementById("alert-border-1").style.display = "none";
+        }
+        let programImg = document.getElementsByClassName("programImg");
+        let files = document.getElementsByClassName("file-name")
+        for (let i = 0; i < files.length; i++) {
+            if (files[i].innerHTML.includes('.py')) {
+                // console.log(files[i].innerHTML);
+                programImg[i].setAttribute("src", "Images/python.png");
+            }
+            if (files[i].innerHTML.includes('.java')) {
+                programImg[i].setAttribute("src", "Images/java.png");
+            }
+            if (files[i].innerHTML.includes('.c')) {
+                programImg[i].setAttribute("src", "Images/c.png");
+            }
+        }
+
+        function preventBack() {
+            window.history.forward();
+        }
+
+        setTimeout("preventBack()", 0);
+
+        window.onunload = function() {
+            null
+        };
+    </script>
+
+</body>
+
+</html>

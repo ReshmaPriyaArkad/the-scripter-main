@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This website helps you to run your scripts and programs online.">
+    <!-- <meta name="Arshad" content="https://arshad272.github.io/"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="ROBOTS" content="Index, FOLLOW">
+    <title>Scripter</title>
+    <link rel="shortcut icon" href="Images/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/loginstyle.css">
+    <script src="https://kit.fontawesome.com/f84cbf777e.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+    <!-- <script src="scripts/loginjs.js"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Container for demo purpose -->
+    <div>
+
+        <!-- Section: Design Block -->
+        <section class="mb-8 background-radial-gradient overflow-hidden">
+            <style>
+                .background-radial-gradient {
+                    background-color: hsl(218, 41%, 15%);
+                    background-image: radial-gradient( 650px circle at 0% 0%, hsl(218, 41%, 35%) 15%, hsl(218, 41%, 30%) 35%, hsl(218, 41%, 20%) 75%, hsl(218, 41%, 19%) 80%, transparent 100%), radial-gradient( 1250px circle at 100% 100%, hsl(218, 41%, 45%) 15%, hsl(218, 41%, 30%) 35%, hsl(218, 41%, 20%) 75%, hsl(218, 41%, 19%) 80%, transparent 100%);
+                }
+                
+                #radius-shape-1 {
+                    height: 220px;
+                    width: 220px;
+                    left: -130px;
+                    background: radial-gradient(#44006b, #ad1fff);
+                    overflow: hidden;
+                }
+                
+                #radius-shape-2 {
+                    border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+                    bottom: -60px;
+                    right: -110px;
+                    width: 300px;
+                    height: 300px;
+                    background: radial-gradient(#44006b, #ad1fff);
+                    overflow: hidden;
+                }
+                
+                .bg-glass {
+                    background-color: hsla(0, 0%, 100%, 0.9);
+                    backdrop-filter: saturate(200%) blur(25px);
+                }
+            </style>
+            <!-- <nav class="navbar navbar-expand-lg shadow-md py-2 bg-white relative flex items-center w-full justify-between">
+                <div class="px-6 w-full flex flex-wrap items-center justify-between">
+                    <div class="flex items-center">
+                        <h3 class="text-2xl font-bold p-1">Welcome to Scripter</h3>
+                        </svg>
+                        </a>
+                    </div>
+                    <div class="navbar-collapse collapse grow items-center" id="navbarSupportedContentY">
+                        <ul class="navbar-nav mr-auto lg:flex lg:flex-row">
+                            <li class="nav-item">
+                                <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Team</a>
+                            </li>
+                            <li class="nav-item mb-2 lg:mb-0">
+                                <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Projects</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center lg:ml-auto">
+                        <a href="terms-of-use.html" type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg cursor-pointer focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                            data-mdb-ripple="true" data-mdb-ripple-color="light">Terms of Use</a>
+                    </div>
+                </div>
+            </nav> -->
+            <div class="px-6 -mt-14 py-8 lg:py-14 md:px-12 text-center lg:text-left">
+                <div class="container mx-auto xl:px-10 text-gray-800">
+                    <div class="grid lg:grid-cols-2 gap-12 flex items-center">
+                        <div class="mt-4 lg:mt-0" style="z-index: 10;">
+                            <h1 class="text-3xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12" style="color: hsl(218, 81%, 95%);">Cloud-Based Code Execution Platform <br /><span style="color: hsl(218, 81%, 75%);">The Scripter</span></h1>
+                            <p class="opacity-95 text-justify" style="color: hsl(218, 100%, 95%)">
+                                Now you don't have to keep your systems running for hours just to execute a program. Just upload your programs in our Cloud Platform. We offer background execution for your programs in our cloud servers. Start/Stop execution of your programs from anywhere
+                                now.
+                            </p>
+                        </div>
+                        <div class="mb-4 lg:mb-0 relative">
+                            <div id="radius-shape-1" class="absolute rounded-full shadow-lg"></div>
+                            <div id="radius-shape-2" class="absolute shadow-lg"></div>
+                            <div class="form drop-shadow-2xl">
+                                <div id="Login" class="min-h-screen flex flex-col items-center justify-center">
+                                    <div class=" drop-shadow-2xl flex flex-col  bg-white  shadow-md  px-4  sm:px-6  md:px-8  lg:px-10  py-8  rounded-3xl  w-full  max-w-md">
+                                        <div class="font-medium self-center text-xl sm:text-3xl text-gray-800">
+                                            Welcome To Scripter
+                                        </div>
+                                        <div class="mt-4 self-center text-xl sm:text-sm text-gray-800">
+                                            Enter your credentials to access your account
+                                        </div>
+
+                                        <div class="mt-10">
+                                            <form action="doLogin" method="POST">
+                                                <div class="flex flex-col mb-5">
+                                                    <label for="email" class="mb-1 text-m tracking-wide text-gray-900 font-semibold">E-Mail Address:</label>
+                                                    <div class="relative">
+                                                        <div class=" inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400  ">
+                                                            <i class="fas fa-at text-blue-500"></i>
+                                                        </div>
+                                                        <input id="email" type="email" name="emailid" class="  text-sm  placeholder-gray-500  pl-10  pr-4  rounded-2xl  border border-gray-400  w-full  py-2  focus:outline-none focus:border-blue-400" />
+                                                    </div>
+                                                </div>
+                                                <div class="flex flex-col mb-6">
+                                                    <label for="password" class="mb-1 text-m tracking-wide text-gray-900 font-semibold">Password:</label>
+                                                    <div class="relative">
+                                                        <div class=" inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
+                                                            <span>
+                                                <i class="fas fa-lock text-blue-500"></i>
+                                              </span>
+                                                        </div>
+
+                                                        <input id="password" type="password" name="password" class="  text-sm  placeholder-gray-500  pl-10  pr-4  rounded-2xl  border border-gray-400  w-full  py-2  focus:outline-none focus:border-blue-400" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex w-full">
+                                                    <button type="submit" class="flex mt-2 items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-blue-500 hover:bg-blue-600 rounded-2xl py-2 w-full transition duration-150 ease-in">
+                                            <span class="mr-2 uppercase">Sign In</span>
+                                            <span>
+                                              <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                              </svg>
+                                            </span>
+                                          </button>
+                                                </div>
+                                            </form>
+                                            <div class="flex justify-center items-center mt-6">
+                                                <a class="  inline-flex  items-center  text-gray-700  font-medium  text-sm text-center">
+                                                    <span class="ml-2 text-black">Forget Password?
+                                                <button onclick="window.location.href='forget-password.html';" class="text-sm ml-2 text-blue-500 font-semibold" >Change Here</button></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="flex justify-center items-center mt-6">
+                                            <a class="  inline-flex  items-center  text-gray-700  font-medium  text-sm text-center">
+                                                <span class="ml-2 text-black">You don't have an account?
+                                            <button onclick="hideLogin()" class="text-sm ml-2 text-blue-500 font-semibold" >Register now</button></span>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div style="display: none;" id="Signup" class="min-h-screen flex flex-col items-center justify-center">
+                                    <div class=" drop-shadow-2xl flex flex-col  bg-white  shadow-md  px-4  sm:px-6  md:px-8  lg:px-10  py-8  rounded-3xl  w-full  max-w-md">
+                                        <div class="font-medium self-center text-xl sm:text-3xl text-gray-800">
+                                            Welcome To Scripter
+                                        </div>
+                                        <div class="mt-4 self-center text-xl sm:text-sm text-gray-800">
+                                            Create your new Scripter Account
+                                        </div>
+
+                                        <div class="mt-10">
+                                            <form action="doOpenAccount" method="POST">
+                                                <div class="flex flex-col mb-5">
+                                                    <label for="email" class="mb-1 text-m tracking-wide text-gray-900 font-semibold">Full Name:</label>
+                                                    <div class="relative">
+                                                        <div class=" inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400  ">
+                                                            <i class="fas fa-user text-blue-500"></i>
+                                                        </div>
+                                                        <input id="name" type="text" name="username" class="  text-sm  placeholder-gray-500  pl-10  pr-4  rounded-2xl  border border-gray-400  w-full  py-2  focus:outline-none focus:border-blue-400" />
+                                                    </div>
+                                                </div>
+                                                <div class="flex flex-col mb-5">
+                                                    <label for="email" class="mb-1 text-m tracking-wide text-gray-900 font-semibold">E-Mail Address:</label>
+                                                    <div class="relative">
+                                                        <div class=" inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400  ">
+                                                            <i class="fas fa-at text-blue-500"></i>
+                                                        </div>
+
+                                                        <input id="email" type="email" name="emailid" class="  text-sm  placeholder-gray-500  pl-10  pr-4  rounded-2xl  border border-gray-400  w-full  py-2  focus:outline-none focus:border-blue-400" />
+                                                    </div>
+                                                </div>
+                                                <div class="flex flex-col mb-6">
+                                                    <label for="password" class="mb-1 text-m tracking-wide text-gray-900 font-semibold">Password:</label>
+                                                    <div class="relative">
+                                                        <div class=" inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
+                                                            <span><i class="fas fa-lock text-blue-500"></i></span>
+                                                        </div>
+                                                        <input id="password" type="password" name="password" class="  text-sm  placeholder-gray-500  pl-10  pr-4  rounded-2xl  border border-gray-400  w-full  py-2  focus:outline-none focus:border-blue-400" />
+                                                    </div>
+                                                </div>
+                                                <div class="flex flex-col mb-6">
+                                                    <label for="password" class="mb-1 text-m tracking-wide text-gray-900 font-semibold">Re-Enter Password:</label>
+                                                    <div class="relative">
+                                                        <div class=" inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
+                                                            <span><i class="fas fa-lock text-blue-500"></i></span>
+                                                        </div>
+                                                        <input id="confirmpassword" type="password" name="confirmpassword" class="text-sm  placeholder-gray-500  pl-10  pr-4  rounded-2xl  border border-gray-400  w-full  py-2  focus:outline-none focus:border-blue-400" placeholder="Confirm your password" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex w-full">
+                                                    <button type="submit" class="flex mt-2 items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-blue-500 hover:bg-blue-600 rounded-2xl py-2 w-full transition duration-150 ease-in">
+                                            <span class="mr-2 uppercase">Create Account</span>
+                                            <span>
+                                              <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                              </svg>
+                                            </span>
+                                          </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="flex justify-center items-center mt-6">
+                                            <a class="  inline-flex  items-center  text-gray-800  font-medium  text-sm text-center">
+                                                <span class="ml-2 text-black">Already have an account?
+                                            <button onclick="hideRegister()" class="text-sm ml-2 text-blue-500 font-semibold" >Login now</button></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="mb-8 text-gray-800 body-font mobile-padding-setter">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+                <img class="object-cover object-center rounded" alt="hero" src="Images/about.jpg">
+            </div>
+            <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">What is Scripter ?</h1>
+                <h1 class="text-justify title-font sm:text-xl text-xl mb-4 font-medium text-gray-900">Scripter = Scripts + Executor. Scripter is an online web application for execution of your programs in cloud servers for multiple days. Now you don't have to keep your Laptop and CPU running for hours. Just upload your programs and click
+                    on "Run". We will execute your scripts in cloud.</h1>
+                <h1 class="text-justify title-font sm:text-lg text-lg mb-4 font-medium text-gray-900">We will never read your programs. But for security reasons our Bots will check the presence of few modules in your code. </h1>
+                <h1 class="text-justify title-font sm:text-lg text-lg mb-4 font-medium text-gray-900">To offer best security we will never store your passwords in cookies and you will be logged out automatically if the website is closed.</h1>
+                <a href="terms-of-use.html" target="__blank" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                    data-mdb-ripple="true" data-mdb-ripple-color="light" href="#!" role="button">Terms of Usage</a>
+
+            </div>
+        </div>
+    </section>
+    <hr>
+    <footer class="text-gray-600 bg-blue-100 body-font">
+        <div class="container px-5 py-5 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                <span class="ml-3 text-xl">Scripter</span>
+            </a>
+            <p class="text-m font-medium text-gray-900 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-500 sm:py-2 sm:mt-0 mt-4">Best | Secure | Safe — Developed By
+                <a target="__blank" href="https://arshad272.github.io" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@Arshad</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a target="__blank" href="https://www.facebook.com/profile.php?id=100013447329814" class="text-gray-700">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a target="__blank" href="https://www.instagram.com/arshad.k.272/" class="ml-3 text-gray-700">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <a target="__blank" href="https://www.linkedin.com/in/arshad272/" class="ml-3 text-gray-700">
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
+        </div>
+    </footer>
+
+    <script>
+        function hideLogin() {
+            document.getElementById("Login").style.display = "none"
+            document.getElementById("Signup").style.display = "flex"
+        }
+
+        function hideRegister() {
+            document.getElementById("Login").style.display = "flex"
+            document.getElementById("Signup").style.display = "none"
+        }
+    </script>
+
+</body>
+
+</html>
